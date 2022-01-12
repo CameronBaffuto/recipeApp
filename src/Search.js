@@ -45,7 +45,7 @@ function Search() {
         <Form.Group className="mb-3" controlId="health">
         <Form.Label>Choose Health Filter</Form.Label>
         <Form.Select>
-          <option onClick={() =>  sethealthlabel("alcohol-free")} value="alcohol-free" disabled>Choose a filter...</option>
+          <option onClick={() =>  sethealthlabel("alcohol-free")} value="alcohol-free">Choose a filter...</option>
           <option onClick={() =>  sethealthlabel("shellfish-free")} value="shellfish-free">Shellfish Free</option>
           <option onClick={() =>  sethealthlabel("vegan")} value="vegan">Vegan</option>
           <option onClick={() =>  sethealthlabel("vegetarian")} value="vegetarian">Vegetarian</option>
