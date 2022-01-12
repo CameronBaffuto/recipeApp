@@ -12,7 +12,7 @@ function Search() {
 
     const [query, setQuery] = useState("");
     const [recipes, setRecipes] = useState([]);
-    const [healthlabel, sethealthlabel] = useState("shellfish-free");
+    const [healthlabel, sethealthlabel] = useState("alcohol-free");
   
     const YOUR_APP_ID = "70c35a79";
     const YOUR_APP_KEY = "e636f7e338545e8b405e86cfc465aaf3";  
@@ -39,14 +39,13 @@ function Search() {
         <Form.Group className="mb-3" controlId="ingredient">
         <InputGroup className="mb-3">
         <Form.Control type="text" name="search" id="search" placeholder="Search for a ingredient..." value={query} onChange={(e) => setQuery(e.target.value)}/>
-        <Button variant="danger" id="button-addon2" onClick={() => setQuery(() => "")}>
-          Reset
-        </Button>
+        <Button variant="danger" id="button-addon2" onClick={() => setQuery(() => "")}>X</Button>
         </InputGroup>
         </Form.Group>
         <Form.Group className="mb-3" controlId="health">
         <Form.Label>Choose Health Filter</Form.Label>
         <Form.Select>
+          <option onClick={() =>  sethealthlabel("alcohol-free")} value="alcohol-free" disabled>Choose a filter...</option>
           <option onClick={() =>  sethealthlabel("shellfish-free")} value="shellfish-free">Shellfish Free</option>
           <option onClick={() =>  sethealthlabel("vegan")} value="vegan">Vegan</option>
           <option onClick={() =>  sethealthlabel("vegetarian")} value="vegetarian">Vegetarian</option>

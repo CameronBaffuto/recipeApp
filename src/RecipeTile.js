@@ -11,14 +11,14 @@ function RecipeTile({ recipe }) {
             window.open(recipe["recipe"]["url"]);
         }}>
             
-            <Card.Img src={recipe["recipe"]["image"]} alt=""/>
+            
             <Card.Body>
-            <Card.Title className="text-light">{recipe["recipe"]["label"]}</Card.Title>
+            <Card.Title className="text-light text-bold mb-3">{recipe["recipe"]["label"]}</Card.Title>
+            <Card.Img src={recipe["recipe"]["image"]} alt=""/>
                 <Card.Text>
-                <p className="text-light">Calories: {recipe["recipe"]["calories"]}</p>
-                <p className="text-light">Servings: {recipe["recipe"]["yield"]}</p>
-                <p className="text-light">Source: {recipe["recipe"]["source"]}</p>
-                
+                    <p className="text-light">Servings: {recipe["recipe"]["yield"]}</p>
+                    <p className="text-light">Calories: {recipe["recipe"]["calories"].toFixed()}</p>
+                    <p className="text-light">Source: {recipe["recipe"]["source"]}</p>
                 </Card.Text>
             </Card.Body>
         </Card>
