@@ -10,7 +10,7 @@ function Nav() {
   <Navbar className="purp" variant="dark">
     <Container>
       <Navbar.Brand href="#" className="text-light">
-      🍔🥩🥞 Recipe Search
+      🍔🥩🥞 Lauren's Recipe App
       </Navbar.Brand>
     </Container>
   </Navbar>

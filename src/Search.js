@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
+import InputGroup from 'react-bootstrap/InputGroup'
 
 
 function Search() {
@@ -29,12 +30,19 @@ function Search() {
     getRecipes();
   }
 
+
+
     return (
     <Container className="mt-5">
     <h5 onClick={getRecipes}>Search for Recipes</h5>
       <Form onSubmit={submit}>
         <Form.Group className="mb-3" controlId="ingredient">
-        <Form.Control type="text" name="search" placeholder="Search for a ingredient..." value={query} onChange={(e) => setQuery(e.target.value)}/>
+        <InputGroup className="mb-3">
+        <Form.Control type="text" name="search" id="search" placeholder="Search for a ingredient..." value={query} onChange={(e) => setQuery(e.target.value)}/>
+        <Button variant="danger" id="button-addon2" onClick={() => setQuery(() => "")}>
+          Reset
+        </Button>
+        </InputGroup>
         </Form.Group>
         <Form.Group className="mb-3" controlId="health">
         <Form.Label>Choose Health Filter</Form.Label>

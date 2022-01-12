@@ -14,6 +14,12 @@ function RecipeTile({ recipe }) {
             <Card.Img src={recipe["recipe"]["image"]} alt=""/>
             <Card.Body>
             <Card.Title className="text-light">{recipe["recipe"]["label"]}</Card.Title>
+                <Card.Text>
+                <p className="text-light">Calories: {recipe["recipe"]["calories"]}</p>
+                <p className="text-light">Servings: {recipe["recipe"]["yield"]}</p>
+                <p className="text-light">Source: {recipe["recipe"]["source"]}</p>
+                
+                </Card.Text>
             </Card.Body>
         </Card>
         </Col>    
